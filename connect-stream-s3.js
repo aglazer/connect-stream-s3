@@ -37,7 +37,7 @@ module.exports = function(options) {
 
     return function handler(req, res, next) {
         // check files have been uploaded
-        if( req.files === undefined || req.files.length === undefined || req.files.length === 0 ) {
+        if( req.files === undefined ) {
             return next('Error: no files uploaded.');
         }
 
